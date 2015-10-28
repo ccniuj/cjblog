@@ -25,7 +25,7 @@
                           <%= @articles[i].title %>
                         </h2>
                         <h3 class="post-subtitle">
-                          <%= @articles[i].text %>
+                          <%= sanitize @articles[i].text %>
                         </h3>
                     <% end %>
                     <p class="post-meta"><%= @articles[i].created_at %></p>
