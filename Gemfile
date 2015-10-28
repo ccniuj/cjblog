@@ -50,3 +50,4 @@ gem 'autoprefixer-rails'
 gem 'populator'
 gem 'faker'
 gem 'figaro'
+gem 'rails_12factor', group: :production

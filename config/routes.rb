@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     get 'about', on: :collection
     get 'contact', on: :collection
   end
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
