@@ -7,7 +7,7 @@
                     <div class="post-heading">
                         <h1><%= @article.title %></h1>
                         <h2 class="subheading"></h2>
-                        <span class="meta"><%= @article.created_at %></span>
+                        <span class="meta"><%= @article.created_at.strftime('%m/%d/%Y') %></span>
                     </div>
                 </div>
             </div>

@@ -53,4 +53,5 @@ gem 'figaro'
 gem 'rails_12factor', group: :production
 gem 'ckeditor'
 gem 'paperclip'
+gem 'kaminari'
 
