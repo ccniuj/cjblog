@@ -55,4 +55,5 @@ gem 'ckeditor'
 gem 'paperclip'
 gem 'kaminari'
 gem 'puma'
+gem 'obfuscate_id'
 
