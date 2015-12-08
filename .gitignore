@@ -18,3 +18,4 @@
 
 # Ignore the user name and password.
 /config/application.yml
+/public/ckeditor_assets/
