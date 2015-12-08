@@ -52,7 +52,6 @@ gem 'faker'
 gem 'figaro'
 gem 'rails_12factor', group: :production
 gem 'ckeditor'
-gem 'ckeditor_rails'
 gem 'paperclip'
 gem 'kaminari'
 gem 'puma'
