@@ -54,6 +54,7 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.7)
       climate_control (>= 0.0.3, < 1.0)
+    coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -105,7 +106,11 @@ GEM
       mimemagic (= 0.3.0)
     pg (0.18.3)
     populator (1.0.0)
+    posix-spawn (0.3.11)
     puma (2.14.0)
+    pygments.rb (0.6.3)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.2.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -140,6 +145,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
+    redcarpet (3.3.3)
     sass (3.4.19)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -173,6 +179,7 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -182,6 +189,7 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   ckeditor
+  coderay
   coffee-rails (~> 4.1.0)
   faker
   figaro
@@ -193,8 +201,10 @@ DEPENDENCIES
   pg
   populator
   puma
+  pygments.rb
   rails (= 4.2.4)
   rails_12factor
+  redcarpet
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

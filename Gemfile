@@ -56,4 +56,6 @@ gem 'paperclip'
 gem 'kaminari'
 gem 'puma'
 gem 'obfuscate_id'
+gem 'redcarpet'
+gem 'coderay'
 
