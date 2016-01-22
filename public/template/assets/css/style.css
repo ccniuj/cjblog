@@ -1845,13 +1845,13 @@ aside .tag-widget .tags a:hover {
 
 .contact-address .address-info .address-info-icon i {
     position: relative;
-    padding: 62px 0px;
+    padding: 20px 0px;
     font-size: 30px;
     color: #dadada;
 }
 
 .contact-address .address-info .address-info-desc {
-    padding: 0px 0px 16px 20px;
+    padding: 0px 0px 0px 0px;
 }
 
 .contact-address .address-info .address-info-desc p {
