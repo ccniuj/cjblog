@@ -1122,9 +1122,8 @@ section {
 }
 
 .progress {
-    border-radius: 0px;
+    border-radius: 10px;
     background-color: #fff;
-    box-shadow: none;
     height: 25px;
     margin-bottom: 15px;
     border: 1px solid #dadada;
