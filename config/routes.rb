@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   end
 
   resource :pages, path: '' do
+    get 'portfolio', on: :collection
     get 'about', on: :collection
     get 'contact', on: :collection
   end

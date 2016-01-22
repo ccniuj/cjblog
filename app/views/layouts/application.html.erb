@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="/template/assets/css/owl.carousel.css">
   <link rel="stylesheet" href="/template/assets/css/owl.theme.css">
   <link rel="stylesheet" href="/template/assets/css/style.css">
-
+  <script src="/template/assets/js/modernizr.custom.97074.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
 
@@ -41,13 +41,16 @@
                     <div class="collapse navbar-collapse" id="main-nav-collapse">
                         <ul class="nav navbar-nav navbar-right text-uppercase">
                             <li>
-                                <a href="index.html"><span>文章</span></a>
+                                <a href="<%=articles_path%>"><span>文章</span></a>
                             </li>
                             <li>
-                                <a href="index.html"><span>作品</span></a>
+                                <a href="<%=portfolio_pages_path%>"><span>作品</span></a>
                             </li>
                             <li>
-                                <a href="contact.html"><span>聯絡</span></a>
+                                <a href="<%=about_pages_path%>"><span>關於我</span></a>
+                            </li>
+                            <li>
+                                <a href="<%=contact_pages_path%>"><span>聯絡</span></a>
                             </li>
                         </ul>
                     </div><!-- nav links -->
@@ -61,12 +64,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-
-                                <ol class="breadcrumb">
-                                    <li><a href="#">blog</a></li>
-                                    <li class="active">multiple blog</li>
-                                </ol> <!-- end of /.breadcrumb -->
-
+                                <%= yield :breadcrumb %>
+                                
                             </div>
                         </div>
                     </div> <!-- /.container -->
@@ -74,7 +73,6 @@
             </header> <!-- /.page-head (header end) -->
             
             <%= yield %>
-
             <!-- footer-navigation start -->  
             <nav class="hidden-xs hidden-sm navbar footer-nav" role="navigation">
                 <div class="container">
@@ -137,27 +135,16 @@
             <!-- footer-navigation end -->
 
     </div>
-<script type="text/javascript" src="/template/assets/js/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="/template/assets/js/bootstrap.min.js"></script>
-        
-
-<!-- script for FAQ using jquery -->
-        
-<script>
-    $(".faq-q").click( function () {
-      var container = $(this).parents(".faq-c");
-      var answer = container.find(".faq-a");
-      var trigger = container.find(".faq-t");
-              
-      answer.slideToggle(200);
-              
-      if (trigger.hasClass("faq-o")) {
-        trigger.removeClass("faq-o");
-      }
-      else {
-        trigger.addClass("faq-o");
-      }
-    });
-</script>
+    <script src="/template/assets/js/jquery-2.1.3.min.js"></script>
+    <script src="/template/assets/js/bootstrap.min.js"></script>
+    <script src="/template/assets/js/jquery.hoverdir.js"></script>
+    <script src="/template/assets/js/script.js"></script>
+    <script>
+        $(function() {
+            $('.portfolio-item > .item-image').each( function() { $(this).hoverdir({
+                hoverDelay : 75
+            }); } );
+        });
+    </script>
 </body>
 </html>

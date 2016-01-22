@@ -2,6 +2,13 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> 
+            <% content_for :breadcrumb do %>
+                <ol class="breadcrumb">
+                    <li><a href="<%=root_path%>">邁向奇點</a></li>
+                    <li class="active">文章</li>
+                </ol> <!-- end of /.breadcrumb -->
+            <% end %>
+
             <section class="blog-content">
                 <div class="container">
                     <div class="row">
@@ -22,20 +29,10 @@
                                 </a>
                               </article> <!-- /.blog-item -->
                             <% end %>
-                            
+
                             <div class="row">
                                 <div class= "col-md-6 col-md-offset-3 text-center">
-                                    <ul class="pagination">
-                                        <li><a href="#"> < </a></li>
-                                        <li class="active">
-                                            <a href="#">1 <span class="sr-only">(current)</span></a>
-                                        </li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li><a href="#"> > </a></li>
-                                    </ul> <!-- /.pagination -->
+                                    <%= paginate @paginate if @paginate %>
                                 </div>
                             </div>
                         </main>

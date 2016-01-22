@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   http_basic_authenticate_with name: ENV['user_name'], password: ENV['user_password'], except: [:index, :show]
 
   def index
-  	@articles = Article.order(created_at: :DESC).page(params[:page]).per(8)
+  	@articles = @paginate = Article.order(created_at: :DESC).page(params[:page]).per(8)
   end
 
   def show
