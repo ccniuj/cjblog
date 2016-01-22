@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/template/assets/css/owl.carousel.css">
   <link rel="stylesheet" href="/template/assets/css/owl.theme.css">
   <link rel="stylesheet" href="/template/assets/css/style.css">
+
   <script src="/template/assets/js/modernizr.custom.97074.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
@@ -41,13 +42,13 @@
                     <div class="collapse navbar-collapse" id="main-nav-collapse">
                         <ul class="nav navbar-nav navbar-right text-uppercase">
                             <li>
-                                <a href="<%=articles_path%>"><span>文章</span></a>
-                            </li>
-                            <li>
-                                <a href="<%=portfolio_pages_path%>"><span>作品</span></a>
-                            </li>
-                            <li>
                                 <a href="<%=about_pages_path%>"><span>關於我</span></a>
+                            </li>
+                            <li>
+                                <a href="<%=portfolios_path%>"><span>作品</span></a>
+                            </li>
+                            <li>
+                                <a href="<%=articles_path%>"><span>文章</span></a>
                             </li>
                             <li>
                                 <a href="<%=contact_pages_path%>"><span>聯絡</span></a>
@@ -139,11 +140,22 @@
     <script src="/template/assets/js/bootstrap.min.js"></script>
     <script src="/template/assets/js/jquery.hoverdir.js"></script>
     <script src="/template/assets/js/script.js"></script>
+    <script src="/template/assets/js/owl.carousel.js"></script>
     <script>
         $(function() {
             $('.portfolio-item > .item-image').each( function() { $(this).hoverdir({
                 hoverDelay : 75
-            }); } );
+            }); });
+            $("#sponsor-list").owlCarousel({
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+                stopOnHover: true,
+                items : 4,
+                itemsDesktop: [1200,4],
+                itemsDesktopSmall: [991,3],
+                itemsTablet: [767,2],
+                itemsTabletSmall: [625,2],
+                itemsMobile: [479,1]
+            });
         });
     </script>
 </body>

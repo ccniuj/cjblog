@@ -1,0 +1,55 @@
+            <% content_for :breadcrumb do %>
+                <ol class="breadcrumb">
+                    <li><a href="<%=root_path%>">邁向奇點</a></li>
+                    <li class="active">作品</li>
+                </ol> <!-- end of /.breadcrumb -->
+            <% end %>
+
+            <div class="main-content">
+
+                <!--  begin portfolio section  -->
+                <section class="bg-light-gray">
+                    <div class="container">
+                        <div class="portfolio-item-list">
+                            <div class="row">
+                              <% @portfolios.each do |portfolio| %>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="portfolio-item">
+                                        <div class="item-image">
+                                            <a href="<%=portfolio.url%>">
+                                                <img src="<%=portfolio.cover.url%>" class="img-responsive center-block" alt="portfolio 1">
+                                                <div><span><i class="fa fa-plus"></i></span></div>
+                                            </a>
+                                        </div>
+
+                                        <div class="item-description">
+                                            <div class="row">
+                                                <div class="col-xs-8">
+                                                    <span class="item-name">
+                                                        <%= portfolio.name %>
+                                                    </span>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <span class="like">
+                                                        <i class="fa fa-eye"></i>
+                                                        <%= portfolio.viewed_times %>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <%= portfolio.description %>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end of /.item-description -->
+                                    </div> <!-- end of /.portfolio-item -->
+                                </div>
+                              <% end %>
+
+                            </div>
+                        </div> <!-- end of portfolio-item-list -->
+                    </div>
+                </section> 
+                <!--   end of portfolio section  -->
+
+            </div> <!-- end of /.main-content -->
