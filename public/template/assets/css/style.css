@@ -1169,6 +1169,10 @@ section {
     width: 90px;
 }
 
+.rectangle {
+	border-radius: 20%;
+}
+
 .service-content:hover .service-icon {
 	background-color: #000;
 	border: 1px solid #000;
