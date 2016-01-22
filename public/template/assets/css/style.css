@@ -282,7 +282,7 @@ html {
 
 #multiple-blog-page .page-head,
 #multiple-blog-left-sidebar .page-head {
-	background: url(../img/multiple_blog-bg.jpg);
+	background: url(/images/horizon.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -307,7 +307,7 @@ html {
 .page-head .header-wrapper {
 	background-color: rgba(0,0,0,0.45);
 	position: relative;
-	padding: 30px 0px;
+	padding: 100px 0px;
 }
 
 /* =-=--=-=-=-=-=-==-=-=-=-  2.4 Form   =-=-=-=-==-=-==-====-==-=- */
