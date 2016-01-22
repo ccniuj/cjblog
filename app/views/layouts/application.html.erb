@@ -20,9 +20,123 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <div id="multiple-blog-page">
+            <!-- site-navigation start -->  
+            <nav id="mainNavigation" class="navbar navbar-dafault main-navigation" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- navbar logo -->
+                        <div class="navbar-brand" id="nav-logo">
+                            <a href="<%=root_path%>">邁向奇點</a>
+                        </div>
+                        <!-- navbar logo -->
+                    </div><!-- /.navbar-header -->
+                    <!-- nav links -->
+                    <div class="collapse navbar-collapse" id="main-nav-collapse">
+                        <ul class="nav navbar-nav navbar-right text-uppercase">
+                            <li>
+                                <a href="index.html"><span>文章</span></a>
+                            </li>
+                            <li>
+                                <a href="index.html"><span>作品</span></a>
+                            </li>
+                            <li>
+                                <a href="contact.html"><span>聯絡</span></a>
+                            </li>
+                        </ul>
+                    </div><!-- nav links -->
+                    
+                </div><!-- /.container -->
+            </nav>
+            <!-- site-navigation end -->
+            <!-- header begin -->
+            <header class="page-head">
+                <div class="header-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
 
-<%= yield %>
-        
+                                <ol class="breadcrumb">
+                                    <li><a href="#">blog</a></li>
+                                    <li class="active">multiple blog</li>
+                                </ol> <!-- end of /.breadcrumb -->
+
+                            </div>
+                        </div>
+                    </div> <!-- /.container -->
+                </div> <!-- /.header-wrapper -->
+            </header> <!-- /.page-head (header end) -->
+            
+            <%= yield %>
+
+            <!-- footer-navigation start -->  
+            <nav class="hidden-xs hidden-sm navbar footer-nav" role="navigation">
+                <div class="container">
+                    
+                    <div class="navbar-header">
+                        
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        
+                        <!-- navbar logo -->
+                        <div class="navbar-brand">
+                            <span class="sr-only">&copy;THEMEWAGON</span>
+                            <a href="index.html">
+                                &copy;THEMEWAGON
+                            </a>
+                        </div>
+                        <!-- navbar logo -->
+
+                    </div><!-- /.navbar-header -->
+
+                    <!-- nav links -->
+                    <div class="collapse navbar-collapse" id="main-nav-collapse">
+                        <ul class="nav navbar-nav navbar-right text-capitalize">
+                            <li><a href="#about">
+                                <span>home</span>
+                            </a></li>
+
+                            <li><a href="#services">
+                                <span>pages</span>
+                            </a></li>
+
+                            <li><a href="#portfolio">
+                                <span>features</span>
+                            </a></li>
+
+                            <li><a href="#team">
+                                <span>portfolio</span>
+                            </a></li>
+
+                            <li><a href="#pricing">
+                                <span>blog</span>
+                            </a></li>
+
+                            <li><a href="#blog">
+                                <span>shop</span>
+                            </a></li>
+
+                            <li><a href="#contact">
+                                <span>contact</span>
+                            </a></li>
+                        </ul>
+                    </div><!-- nav links -->
+                    
+                </div><!-- /.container -->
+            </nav>
+            <!-- footer-navigation end -->
+
+    </div>
 <script type="text/javascript" src="/template/assets/js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="/template/assets/js/bootstrap.min.js"></script>
         

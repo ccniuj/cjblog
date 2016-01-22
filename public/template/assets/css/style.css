@@ -246,6 +246,10 @@ html {
 	}
 }
 
+#nav-logo {
+	  font-size: 32px;
+	  margin-top: 8px;
+}
 /* =-=--=-=-=-=-=-==-=-=-=-  2.3 Header   =-=-=-=-==-=-==-====-==-=- */
 
 #about-page .page-head {
