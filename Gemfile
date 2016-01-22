@@ -58,4 +58,4 @@ gem 'puma'
 gem 'obfuscate_id'
 gem 'redcarpet'
 gem 'coderay'
-
+gem 'awesome_print'

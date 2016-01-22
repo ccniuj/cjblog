@@ -6,88 +6,23 @@
                 <div class="container">
                     <div class="row">
                         <main class="col-md-9 col-md-push-3" style="display: block;">
-
-                            <article class="blog-item">
-                                <img class="img-responsive center-block" src="/template/assets/img/blog-item1.jpg" alt="blog-item1">
+                            <% @articles.each do |article| %>
+                              <article class="blog-item">
+                                <img class="img-responsive center-block" src="<%= article.cover.url %>" alt="blog-item1">
                                 <div class="blog-heading">
-                                    <h3 class="text-capitalize">single image post title here</h3>
+                                    <h3 class="text-capitalize"><%= article.title %></h3>
                                     <span class="date">may 24,2015</span>
                                     <span>12 comments</span>
                                 </div>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and ...
-                                </p>
+                                <p><%= article.text %></p>
 
-                                <a href="#" class="text-capitalize ">
+                                <a href="<%= article_path(article) %>" class="text-capitalize ">
                                     read more
                                     <span><i class="fa fa-angle-double-right"></i> </span>
                                 </a>
-                            </article> <!-- /.blog-item -->
-
-
-                            <article class="blog-item">
-                                <img class="img-responsive center-block" src="/template/assets/img/blog-item2.jpg" alt="blog-item2">
-                                <div class="blog-heading">
-                                    <h3 class="text-capitalize">single image post title here</h3>
-                                    <span class="date">may 24,2015</span>
-                                    <span>12 comments</span>
-                                </div>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and ...
-                                </p>
-
-                                <a href="#" class="text-capitalize ">
-                                    read more
-                                    <span><i class="fa fa-angle-double-right"></i> </span>
-                                </a>
-                            </article> <!-- /.blog-item -->
-
-
-                            <article class="blog-item">
-                                <img class="img-responsive center-block" src="/template/assets/img/blog-item3.jpg" alt="blog-item3">
-                                <div class="blog-heading">
-                                    <h3 class="text-capitalize">single image post title here</h3>
-                                    <span class="date">may 24,2015</span>
-                                    <span>12 comments</span>
-                                </div>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and ...
-                                </p>
-
-                                <a href="#" class="text-capitalize ">
-                                    read more
-                                    <span><i class="fa fa-angle-double-right"></i> </span>
-                                </a>
-                            </article> <!-- /.blog-item -->
-
-
-                            <article class="blog-item">
-                                <img class="img-responsive center-block" src="/template/assets/img/blog-item4.jpg" alt="blog-item4">
-                                <div class="blog-heading">
-                                    <h3 class="text-capitalize">single image post title here</h3>
-                                    <span class="date">may 24,2015</span>
-                                    <span>12 comments</span>
-                                </div>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and ...
-                                </p>
-
-                                <a href="#" class="text-capitalize ">
-                                    read more
-                                    <span><i class="fa fa-angle-double-right"></i> </span>
-                                </a>
-                            </article> <!-- /.blog-item -->
-
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <blockquote>
-                                        <p>Duis eget ultricies lorem, et rhoncus augue. Aliquam id est semper, tincidunt nisi ac, tristique enim. Phasellus accumsan, enim eget facilisis mollis, est orcidearn malesuada libero, at tristique ligula nulla id eros hasellus accumsan.</p>
-                                        <footer>Technext</footer>
-                                    </blockquote>
-                                </div>
-                            </div>
-
+                              </article> <!-- /.blog-item -->
+                            <% end %>
+                            
                             <div class="row">
                                 <div class= "col-md-6 col-md-offset-3 text-center">
                                     <ul class="pagination">
