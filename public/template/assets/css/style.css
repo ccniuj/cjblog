@@ -58,7 +58,7 @@
 
 /*================================= 1. font import  ===========================================*/
 
-/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 
 
 
@@ -153,11 +153,11 @@ html {
 
 #mainNavigation {
     margin-bottom: 0px;
-    background-color: #fff;
+    background-color: #2d2d2d;
 }
 
 #mainNavigation .navbar-nav li a {
-	color: #969595;
+	color: #fff;
 	padding: 25px 15px;
 }
 
@@ -250,6 +250,10 @@ html {
 	  font-size: 32px;
 	  margin-top: 8px;
 }
+
+#nav-logo a{
+	  color: #fff;
+}
 /* =-=--=-=-=-=-=-==-=-=-=-  2.3 Header   =-=-=-=-==-=-==-====-==-=- */
 
 #about-page .page-head {
@@ -282,7 +286,7 @@ html {
 
 #multiple-blog-page .page-head,
 #multiple-blog-left-sidebar .page-head {
-	background: url(/images/horizon.jpg);
+	background: url(/images/layout/horizon.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -650,6 +654,7 @@ footer .input-group span.input-group-addon {
 
 section {
 	padding: 1.7129em 0;
+	border-top: 1px solid #BFBDBD;
 }
 
 .headline {
@@ -1066,6 +1071,7 @@ section {
 .team-member-box {
 	border: 1px solid #dadada;
 	margin-bottom: 3.1269em;
+	background-color: #fff;
 }
 
 .team-member-description {
@@ -1130,7 +1136,7 @@ section {
 }
 
 .progress-bar {
-    background-color: #F96D6D;
+    background-color: #0556A9;
     text-align: right;
     padding-right: 15px;
 }
@@ -1158,10 +1164,10 @@ section {
 }
 
 .service-icon {
-	background-color: #fff;
-	border: 1px solid #969595;
+	background-color: rgba(160, 216, 255, 0.22);
+	border: 2px solid #04378C;
 	border-radius: 50%;
-    color: #969595;
+    color: #04378C;
     font-size: 45px;
     height: 90px;
     padding: 10px 0px 15px 3px;
@@ -1927,6 +1933,7 @@ aside .tag-widget .tags a:hover {
   position: relative;
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  background-color: #fff; 
 }
 
 .timeline > li > .timeline-panel:before {
