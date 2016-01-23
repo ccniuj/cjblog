@@ -30,8 +30,8 @@ class PortfoliosController < ApplicationController
   def update
   	@portfolio = Portfolio.find(params[:id])
 
-  	if @portfolio.update(Portfolio_params) then
-  	  redirect_to @portfolio
+  	if @portfolio.update(portfolio_params) then
+  	  redirect_to portfolios_path
   	else
   	  render 'edit'
   	end
