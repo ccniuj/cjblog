@@ -14,13 +14,12 @@
                                 <img class="img-responsive center-block" src="<%= article.cover.url %>" alt="blog-item1">
                                 <div class="blog-heading">
                                     <h3 class="text-capitalize"><%= article.title %></h3>
-                                    <span class="date">may 24,2015</span>
-                                    <span>12 comments</span>
+                                    <span class="date"><%= article.created_at.strftime('%m/%d/%Y') %></span>
                                 </div>
                                 <p><%= sanitize article.text %></p>
 
                                 <a href="<%= article_path(article) %>" class="text-capitalize ">
-                                    read more
+                                    繼續閱讀
                                     <span><i class="fa fa-angle-double-right"></i> </span>
                                 </a>
                               </article> <!-- /.blog-item -->

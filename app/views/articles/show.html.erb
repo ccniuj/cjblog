@@ -5,10 +5,11 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1><%= @article.title %></h1>
+                        <h1 style="padding-top:30px;"><%= @article.title %></h1>
                         <h2 class="subheading"></h2>
                         <span class="meta"><%= @article.created_at.strftime('%m/%d/%Y') %></span>
                     </div>
+                    <img src="<%=@article.cover.url%>" class="img-responsive center-block" style="margin-top:30px;">
                 </div>
             </div>
         </div>
@@ -24,10 +25,6 @@
             </div>
         </div>
     </article>
-
-    <hr>
-
-
 
 <!-- <h1>This is article show</h1>
 <p>
