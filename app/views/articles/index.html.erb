@@ -16,7 +16,7 @@
                                     <h3 class="text-capitalize"><%= article.title %></h3>
                                     <span class="date"><%= article.created_at.strftime('%m/%d/%Y') %></span>
                                 </div>
-                                <p><%= sanitize article.text %></p>
+                                <p><%= sanitize truncate(article.text, length: 300, separator: '</p>', escape: false) %></p>
 
                                 <a href="<%= article_path(article) %>" class="text-capitalize ">
                                     繼續閱讀
