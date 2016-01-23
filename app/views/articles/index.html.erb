@@ -17,7 +17,7 @@
                                     <span class="date">may 24,2015</span>
                                     <span>12 comments</span>
                                 </div>
-                                <p><%= article.text %></p>
+                                <p><%= sanitize article.text %></p>
 
                                 <a href="<%= article_path(article) %>" class="text-capitalize ">
                                     read more
@@ -35,29 +35,6 @@
 
                         <!-- begin sidebar -->
                         <aside class="col-md-3 col-md-pull-9">
-
-                            <!-- begin tag-widget -->
-                            <div class="tag-widget">
-                                <h4>Popular Tags</h4>
-                                <div class="tags">
-                                    <a href="#">masonary</a>
-                                    <a href="#">responsive</a>
-                                    <a href="#">ecommerce</a>
-                                    <a href="#">web design</a>
-                                    <a href="#">wordpress</a>
-                                    <a href="#">mobile</a>
-                                    <a href="#">retina</a>
-                                    <a href="#">multi-purpose</a>
-                                    <a href="#">blog posts</a>
-                                    <a href="#">new slider</a>
-                                    <a href="#">popular</a>
-                                    <a href="#">recent</a>
-                                    <a href="#">modern</a>
-                                    <a href="#">themeforest</a>
-                                </div>
-                            </div> <!-- /.tag-widget -->
-
-
                             <!-- begin archieve-widget  -->
                             <div class="archive-widget">
                                 <h4>Archives</h4>
