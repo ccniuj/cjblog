@@ -21,7 +21,7 @@ class PortfoliosController < ApplicationController
   def create
   	@portfolio = Portfolio.new(portfolio_params)
   	if @portfolio.save
-  	  redirect_to @portfolio
+  	  redirect_to portfolios_path
   	else
   	  render 'new'
   	end
@@ -46,6 +46,6 @@ class PortfoliosController < ApplicationController
 
   private
   def portfolio_params
-  	params.require(:Portfolio).permit(:name, :description, :cover)
+  	params.require(:portfolio).permit(:name, :description, :cover)
   end
 end
