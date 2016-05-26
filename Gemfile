@@ -45,6 +45,7 @@ group :development do
   gem 'spring'
 end
 
+gem 'rack-cors', :require => 'rack/cors'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'populator'

@@ -1,7 +1,7 @@
 class Article < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   validates :title, presence: true, length: {minimum: 5}
-  obfuscate_id
+  # obfuscate_id
 
   has_attached_file :cover, styles: { origin:"600x600>", medium: "300x300>", thumb: "100x100>" }, 
     default_url: "/images/:style/missing.png"

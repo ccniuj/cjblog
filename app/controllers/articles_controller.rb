@@ -1,13 +1,12 @@
 class ArticlesController < ApplicationController
-  
-  http_basic_authenticate_with name: ENV['user_name'], password: ENV['user_password'], except: [:index, :show]
-
   def index
-  	@articles = @paginate = Article.order(created_at: :DESC).page(params[:page]).per(5)
+    @articles = @paginate = Article.order(created_at: :DESC).page(params[:page]).per(5)
+    render json: @articles
   end
 
   def show
   	@article = Article.find(params[:id])
+    render json: @article
   end
 
   def new
@@ -21,7 +20,7 @@ class ArticlesController < ApplicationController
   def create
   	@article = Article.new(article_params)
   	if @article.save
-  	  redirect_to @article
+      render json: { message: '新增成功' }
   	else
   	  render 'new'
   	end
@@ -31,7 +30,7 @@ class ArticlesController < ApplicationController
   	@article = Article.find(params[:id])
 
   	if @article.update(article_params) then
-  	  redirect_to @article
+      render json: { message: '更新成功' }
   	else
   	  render 'edit'
   	end
@@ -40,8 +39,7 @@ class ArticlesController < ApplicationController
   def destroy
   	@article = Article.find(params[:id])
   	@article.destroy
-
-  	redirect_to @article
+    render json: { message: '刪除成功' }
   end
 
   private
