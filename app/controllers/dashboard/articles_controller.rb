@@ -1,4 +1,4 @@
-class ArticlesController < ApplicationController
+class Dashboard::ArticlesController < Dashboard::DashboardController
   def index
     @articles = @paginate = Article.order(created_at: :DESC).page(params[:page]).per(5)
     render json: @articles
@@ -18,12 +18,16 @@ class ArticlesController < ApplicationController
   end
 
   def create
-  	@article = Article.new(article_params)
-  	if @article.save
-      render json: { message: '新增成功' }
-  	else
-  	  render 'new'
-  	end
+    respond_to do |format|
+      format.json do
+  	    @article = Article.new(article_params)
+  	    if @article.save!
+          render json: { message: '新增成功' }
+  	    else
+  	      render 'new'
+  	    end
+      end
+    end
   end
 
   def update
@@ -44,6 +48,6 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-  	params.require(:article).permit(:title, :text, :cover)
+  	params.require(:article).permit(:text)
   end
 end
