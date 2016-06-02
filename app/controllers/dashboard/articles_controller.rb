@@ -5,8 +5,12 @@ class Dashboard::ArticlesController < Dashboard::DashboardController
   end
 
   def show
-  	@article = Article.find(params[:id])
-    render json: @article
+    respond_to do |format|
+      format.json do
+  	    @article = Article.find(params[:id])
+        render json: @article
+      end
+    end
   end
 
   def new

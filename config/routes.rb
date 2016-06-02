@@ -7,11 +7,13 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   
+  scope controller: :pages do
+    get 'articles'
+  end
+
   namespace :dashboard do
-    resources :articles do
-      resources :comments
-    end
-    resources :portfolios, :except => [:show]
+    resources :articles
+    resources :portfolios
   end
 
   # Example of regular route:
