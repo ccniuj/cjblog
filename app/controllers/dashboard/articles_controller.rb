@@ -52,6 +52,6 @@ class Dashboard::ArticlesController < Dashboard::DashboardController
 
   private
   def article_params
-  	params.require(:article).permit(:text)
+  	params.require(:article).permit(:title, :text)
   end
 end
