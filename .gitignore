@@ -19,3 +19,4 @@
 # Ignore the user name and password.
 /config/application.yml
 /public/.DS_Store
+/.DS_Store

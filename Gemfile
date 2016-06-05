@@ -19,6 +19,7 @@ gem 'devise'
 gem 'awesome_print'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'active_model_serializers'
+gem 'aws-sdk'
 
 gem 'autoprefixer-rails'
 gem 'populator'
@@ -30,7 +31,6 @@ gem 'kaminari'
 gem 'obfuscate_id'
 gem 'redcarpet'
 gem 'coderay'
-gem 'aws-sdk-v1'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views

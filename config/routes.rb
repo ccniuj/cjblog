@@ -9,10 +9,11 @@ Rails.application.routes.draw do
   
   scope controller: :pages do
     get 'articles'
-    get 'article/:id' => "pages#article"
+    get 'article/:id', action: :article
   end
 
   namespace :dashboard do
+    post 'upload' => 'dashboard#upload'
     resources :articles
     resources :portfolios
   end
