@@ -7,9 +7,8 @@ class ArticleSerializer < ActiveModel::Serializer
     case instance_options[:template]
     when 'articles'
       object.text.split("\n").first
-    when 'article'
-      object.text
     else
+      object.text
     end
   end
 end

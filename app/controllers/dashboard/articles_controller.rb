@@ -4,54 +4,38 @@ class Dashboard::ArticlesController < Dashboard::DashboardController
     render json: @articles
   end
 
-  def show
-    respond_to do |format|
-      format.json do
-  	    @article = Article.find(params[:id])
-        render json: @article
-      end
-    end
-  end
-
-  def new
-  	@article = Article.new
-  end
-
   def edit
-  	@article = Article.find(params[:id])
+    @article = Article.find_by id: params[:id]
+    render json: @article
   end
 
   def create
-    respond_to do |format|
-      format.json do
-  	    @article = Article.new(article_params)
-  	    if @article.save!
-          render json: { message: '新增成功' }
-  	    else
-  	      render 'new'
-  	    end
-      end
+    @article = Article.new(article_params)
+    if @article.save!
+      render json: { message: '新增成功' }
+    else
+      render json: { message: '新增失敗' }
     end
   end
 
   def update
-  	@article = Article.find(params[:id])
+    @article = Article.find(params[:id])
 
-  	if @article.update(article_params) then
+    if @article.update(article_params)
       render json: { message: '更新成功' }
-  	else
-  	  render 'edit'
-  	end
+    else
+      render json: { message: '更新失敗' }
+    end
   end
 
   def destroy
-  	@article = Article.find(params[:id])
-  	@article.destroy
+    @article = Article.find(params[:id])
+    @article.destroy
     render json: { message: '刪除成功' }
   end
 
   private
   def article_params
-  	params.require(:article).permit(:title, :text)
+    params.require(:article).permit(:title, :text)
   end
 end
