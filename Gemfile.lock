@@ -198,6 +198,7 @@ DEPENDENCIES
   awesome_print
   aws-sdk-v1
   byebug
+  capistrano
   capistrano-bundler
   capistrano-passenger
   capistrano-rvm
