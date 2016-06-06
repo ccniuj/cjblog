@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
 
   namespace :dashboard do
+    get 'get_current_user' => 'dashboard#get_current_user'
     post 'upload' => 'dashboard#upload'
     resources :articles
     resources :portfolios
