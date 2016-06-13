@@ -14,7 +14,7 @@ class Dashboard::ArticlesController < Dashboard::DashboardController
     if @article.save!
       render json: { message: '新增成功' }
     else
-      render json: { message: @article.errors.full_messages.join('，') }
+      render json: { message: '新增失敗' }
     end
   end
 
