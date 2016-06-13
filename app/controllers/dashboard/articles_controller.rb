@@ -14,7 +14,7 @@ class Dashboard::ArticlesController < Dashboard::DashboardController
     if @article.save!
       render json: { message: '新增成功' }
     else
-      render json: { message: '新增失敗' }
+      render json: { message: @article.errors.full_messages.join('，') }
     end
   end
 
@@ -36,6 +36,6 @@ class Dashboard::ArticlesController < Dashboard::DashboardController
 
   private
   def article_params
-    params.require(:article).permit(:title, :text)
+    params.require(:article).permit(:name, :title, :text)
   end
 end

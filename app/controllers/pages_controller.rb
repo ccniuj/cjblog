@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def article
-    @article = Article.find_by id: params[:id]
+    @article = Article.find_by name: params[:name]
     render json: @article
   end
 end

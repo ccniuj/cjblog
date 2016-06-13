@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Rake::Task['db:drop'].execute
+Rake::Task['db:create'].execute
+Rake::Task['db:migrate'].execute

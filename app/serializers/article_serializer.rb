@@ -1,5 +1,6 @@
 class ArticleSerializer < ActiveModel::Serializer
   attributes :id,
+             :name,
              :title,
              :text,
              :created_at
