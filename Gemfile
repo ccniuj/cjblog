@@ -22,13 +22,10 @@ gem 'active_model_serializers'
 gem 'aws-sdk'
 
 gem 'autoprefixer-rails'
-gem 'populator'
 gem 'faker'
 gem 'figaro'
 gem 'rails_12factor', group: :production
-gem 'paperclip'
 gem 'kaminari'
-gem 'obfuscate_id'
 gem 'redcarpet'
 gem 'coderay'
 
