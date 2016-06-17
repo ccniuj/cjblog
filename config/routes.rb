@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     get 'get_current_user' => 'dashboard#get_current_user'
     post 'upload' => 'dashboard#upload'
     resources :articles
+    resources :tags
   end
 
   # Example of regular route:

@@ -4,7 +4,7 @@ class Dashboard::ArticlesController < Dashboard::DashboardController
     render json: @articles
   end
 
-  def edit
+  def show
     @article = Article.find_by id: params[:id]
     render json: @article
   end
