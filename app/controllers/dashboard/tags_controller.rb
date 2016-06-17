@@ -1,6 +1,6 @@
 class Dashboard::TagsController < Dashboard::DashboardController
   def index
-    @tags = Tag.all
+    @tags = Tag.all.order(created_at: :DESC)
     render json: @tags
   end
 
@@ -29,6 +29,6 @@ class Dashboard::TagsController < Dashboard::DashboardController
 
   private
   def tag_params
-    params.require(:tag).permit(:name)
+    params.require(:tag).permit(:name, :title)
   end
 end

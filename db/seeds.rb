@@ -11,8 +11,8 @@ Rake::Task['db:create'].execute
 Rake::Task['db:migrate'].execute
 Rake::Task['admin:create'].execute
 
-3.times do
-  t = Tag.create! name: Faker::Lorem.word
+3.times do |i|
+  t = Tag.create! name: "tag_#{i}", title: Faker::Lorem.word
   3.times do
     a = Article.create! name: Faker::Lorem.word, title: Faker::Lorem.word, text: Faker::Lorem.paragraph(3)
     a.article_tags.create! tag_id: t.id
