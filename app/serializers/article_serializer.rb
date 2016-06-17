@@ -3,7 +3,7 @@ class ArticleSerializer < ActiveModel::Serializer
              :name,
              :title,
              :text,
-             :tags
+             :tags,
              :created_at
   def text
     case instance_options[:template]
