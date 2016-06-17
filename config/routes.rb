@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   namespace :dashboard do
     get 'get_current_user' => 'dashboard#get_current_user'
     post 'upload' => 'dashboard#upload'
-    resources :articles
+    resources :articles do
+      post 'update_tags', on: :member
+    end
     resources :tags
   end
 

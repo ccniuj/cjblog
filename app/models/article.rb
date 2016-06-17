@@ -12,4 +12,11 @@ class Article < ActiveRecord::Base
   		result
   	end
   end
+
+  def update_tags tag_ids
+    self.article_tags.destroy_all
+    tag_ids.each do |tag_id|
+      self.article_tags.create tag_id: tag_id
+    end
+  end
 end

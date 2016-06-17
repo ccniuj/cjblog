@@ -18,7 +18,6 @@ class Dashboard::TagsController < Dashboard::DashboardController
     end
   end
 
-
   def update
     @tag = Tag.find_by id: params[:id]
     if @tag.update!(tag_params)

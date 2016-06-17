@@ -3,6 +3,7 @@ class ArticleSerializer < ActiveModel::Serializer
              :name,
              :title,
              :text,
+             :tags
              :created_at
   def text
     case instance_options[:template]
@@ -10,6 +11,12 @@ class ArticleSerializer < ActiveModel::Serializer
       object.text.split("\n").first
     else
       object.text
+    end
+  end
+
+  def tags
+    object.tags.map do |tag|
+      TagSerializer.new tag
     end
   end
 end
