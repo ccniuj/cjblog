@@ -1,6 +1,6 @@
 class Dashboard::ArticlesController < Dashboard::DashboardController
   def index
-    @articles = @paginate = Article.order(created_at: :DESC).page(params[:page]).per(5)
+    @articles = Article.order(created_at: :DESC)
     render json: @articles
   end
 
