@@ -1,7 +1,6 @@
 # config valid only for current version of Capistrano
 set :application, 'cjblog'
 set :repo_url, 'git@github.com:davidjuin0519/cjblog.git'
-set :deploy_to, '/var/app/cjblog'
 set :branch, 'master'
 set :keep_releases, 5
 
