@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
   scope controller: :pages do
     get 'articles'
-    get 'article/:name', action: :article
+    get 'articles/:name', action: :article
   end
 
   namespace :dashboard do
